@@ -1,12 +1,6 @@
-/**
- * Created by Pororo on 17/5/10.
- */
-/**
- * Created by Pororo on 17/5/10.
- */
 import React, { Component } from 'react'
-import Link from 'next/link'
 import { Row, Col, Input, DatePicker, Radio, Form, Icon, Button, Card, InputNumber } from 'antd'
+import './index.less'
 const RadioGroup = Radio.Group
 const FormItem = Form.Item
 
@@ -275,15 +269,6 @@ class Create extends Component {
             </Col>
           </Card>
         </Col>
-
-        <style jsx>{`
-        .edit {
-          margin-top: 100px;
-        }
-        .edit span{
-          font-size:14px;
-        }
-    `}</style>
       </div>
     )
   }
