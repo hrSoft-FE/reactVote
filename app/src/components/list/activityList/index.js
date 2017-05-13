@@ -45,14 +45,7 @@ const data = [{
   address: 'London Park',
 }]
 
-
 const ActivityList = () => (
-  <div className="act-list">
-    <Row>
-      <Col span={22} offset={1}>
-        <Table columns={columns} dataSource={data} scroll={{x: 1300}} />
-      </Col>
-    </Row>
-  </div>
+  <Table columns={columns} dataSource={data} scroll={{x: 1300}} />
 )
 export default ActivityList

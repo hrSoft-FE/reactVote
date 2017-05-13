@@ -1,5 +1,6 @@
 import React from 'react'
 import { Table, Icon } from 'antd'
+import './index.less'
 const trunTo = {
   href: 'vote',
   text: '票数统计'

@@ -50,11 +50,4 @@ class NormalLoginForm extends Component {
 }
 
 const WrappedNormalLoginForm = Form.create()(NormalLoginForm)
-//
-// const Login = (props) => (
-//   <div className="login">
-//     <h1 style={LoginFormTitleStyle}>{props.title || ''}</h1>
-//     <WrappedNormalLoginForm title={props.title} />
-//   </div>
-// )
 export default WrappedNormalLoginForm
