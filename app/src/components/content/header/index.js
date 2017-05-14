@@ -12,7 +12,6 @@ const Headers = () => (
         <Icon type="ellipsis" />
       </div>
     </div>
-
   </div>
 )
 export default Headers

@@ -5,6 +5,5 @@ const title = '登录'
 export default () => (
   <div className="login-wrapper">
     <Login title={title} className="login" />
-
   </div>
 )

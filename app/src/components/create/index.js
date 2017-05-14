@@ -105,6 +105,18 @@ class Create extends Component {
     const {startValue, endValue, endOpen} = this.state
     //选项添加
     const {getFieldDecorator, getFieldValue} = this.props.form
+    const GlobalSpanOffset = {
+      span: 22,
+      offset: 9
+    }
+    const TitleSpanOffset = {
+      span: 3,
+      offset: 0
+    }
+    const InputSpanOffset = {
+      span: 7,
+      offset: 1
+    }
     const formItemLayoutWithOutLabel = {
       labelCol: {
         xs: {span: 24},
@@ -150,9 +162,9 @@ class Create extends Component {
           <Card>
             <Col span={20}>
               <Row style={{marginTop: '20px'}}>
-                <Col span={22} offset={9}>
-                  <Col span={3}><span>活动名称</span></Col>
-                  <Col span={7}>
+                <Col {...GlobalSpanOffset}>
+                  <Col {...TitleSpanOffset}><span>活动名称</span></Col>
+                  <Col {...InputSpanOffset}>
                     <FormItem>
                       {getFieldDecorator('title', {
                         rules: [{required: true, message: '请输入活动名称'}],
@@ -164,9 +176,9 @@ class Create extends Component {
                 </Col>
               </Row>
               <Row>
-                <Col span={22} offset={9}>
-                  <Col span={3}><span>开始时间</span></Col>
-                  <Col span={10}>
+                <Col {...GlobalSpanOffset}>
+                  <Col {...TitleSpanOffset}><span>开始时间</span></Col>
+                  <Col span={10} offset={1}>
                     <DatePicker
                       disabledDate={this.disabledStartDate}
                       showTime
@@ -180,9 +192,9 @@ class Create extends Component {
                 </Col>
               </Row>
               <Row style={{marginTop: '20px'}}>
-                <Col span={22} offset={9}>
-                  <Col span={3}><span>结束时间</span></Col>
-                  <Col span={10}>
+                <Col {...GlobalSpanOffset}>
+                  <Col {...TitleSpanOffset}><span>结束时间</span></Col>
+                  <Col span={10} offset={1}>
                     <DatePicker
                       disabledDate={this.disabledEndDate}
                       showTime
@@ -197,9 +209,9 @@ class Create extends Component {
                 </Col>
               </Row>
               <Row style={{marginTop: '20px'}}>
-                <Col span={22} offset={9}>
-                  <Col span={3}><span>投票形式</span></Col>
-                  <Col span={10}>
+                <Col {...GlobalSpanOffset}>
+                  <Col {...TitleSpanOffset}><span>投票形式</span></Col>
+                  <Col span={10} offset={1}>
                     <FormItem>
                       {getFieldDecorator('type', {
                         rules: [{required: true, message: '请选择投票类型'}],
@@ -215,9 +227,9 @@ class Create extends Component {
                 </Col>
               </Row>
               <Row style={{display: this.state.type === 2 ? 'block' : 'none'}}>
-                <Col span={22} offset={9}>
-                  <Col span={3}><span>最多选择</span></Col>
-                  <Col span={7}>
+                <Col {...GlobalSpanOffset}>
+                  <Col {...TitleSpanOffset}><span>最多选择</span></Col>
+                  <Col {...InputSpanOffset}>
                     <FormItem>
                       {getFieldDecorator('number', {
                         rules: [{required: true, message: '请选择最多选择数'}],
@@ -229,9 +241,9 @@ class Create extends Component {
                 </Col>
               </Row>
               <Row style={{display: this.state.type === 3 ? 'block' : 'none'}}>
-                <Col span={22} offset={9}>
-                  <Col span={3}><span>分数上额</span></Col>
-                  <Col span={10}>
+                <Col {...GlobalSpanOffset}>
+                  <Col {...TitleSpanOffset}><span>分数上额</span></Col>
+                  <Col span={10} offset={1}>
                     <FormItem>
                       {getFieldDecorator('point', {
                         rules: [{required: true, message: '请选择分数上限'}],
@@ -246,7 +258,7 @@ class Create extends Component {
                 </Col>
               </Row>
               <Row>
-                <Col span={22} offset={9}>
+                <Col {...GlobalSpanOffset}>
                   <Form onSubmit={this.handleSubmit}>
                     {formItems}
                     <FormItem {...formItemLayoutWithOutLabel}>
@@ -259,7 +271,7 @@ class Create extends Component {
                     <FormItem {...formItemLayoutWithOutLabel}>
                       <Col span={20} offset={5}>
                         <Button type="primary" htmlType="submit" size="large" style={{marginRight: '20px'}}>新建</Button>
-                        <Link to="/admin">
+                        <Link to="admin">
                           <Button size="large">返回</Button>
                         </Link>
                       </Col>

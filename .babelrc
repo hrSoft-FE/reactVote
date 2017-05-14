@@ -8,12 +8,10 @@
     "transform-runtime",
     "add-module-exports",
     "transform-decorators-legacy",
-    [
-      "import",
-      {
-        "libraryName": "antd",
-        "style": true
-      }
-    ]
+    ["import", {
+      "libraryName": "antd",
+      "style": true
+    }]
   ]
+
 }

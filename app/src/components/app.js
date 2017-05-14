@@ -13,7 +13,6 @@ class AppComponent extends Component {
   render () {
     return (
       <div className="App">
-        this is the app component
         {this.props.children}
       </div>
     )
