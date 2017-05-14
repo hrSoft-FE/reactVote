@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import Logo from '../../components/content/logo/index'
-
+import Logo from '../../components/content/lineText/index'
 import { Button } from 'antd'
 import Header from '../../components/content/header/index'
 import Footer from '../../components/content/footer/index'
@@ -11,6 +10,7 @@ class Index extends Component {
     return (
     <div className="user-index">
       <Header />
+      <Logo text="不洗碗工作室" />
       {/*<Voting />*/}
       {this.props.children}
       {/*<Logo />*/}

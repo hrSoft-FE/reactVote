@@ -121,7 +121,7 @@ class Voting extends Component {
             { this.state.type === 1 ? Single : (this.state.type === 2 ? Double : Score)}
           </RadioGroup>
         </div>
-        {/*<FooterButton />*/}
+        <FooterButton />
         <Share />
       </div>
     )

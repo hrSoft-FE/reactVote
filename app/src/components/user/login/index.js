@@ -44,7 +44,7 @@ class NormalLoginForm extends Component {
             已有账号，立即登录
           </Button>
           {/*Or <a href="">register now!</a>*/}
-          <Link to="register" className="login-form-register">
+          <Link to="users/register" className="login-form-register">
             <Button type="primary" className="login-form-button">
               还没账号，立即注册
             </Button>
