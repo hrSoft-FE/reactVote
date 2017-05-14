@@ -1,9 +1,14 @@
 import React from 'react'
 import { Table, Icon } from 'antd'
+import {Link} from 'react-router'
 import './index.less'
-const trunTo = {
-  href: 'vote',
+const goToVote = {
+  href: 'vote-res',
   text: '票数统计'
+}
+const goToScore = {
+  href: 'score-res',
+  text: '分数统计'
 }
 const columns = [
   {title: 'Full Name', width: 100, dataIndex: 'name', key: 'name', fixed: 'left'},
@@ -19,7 +24,7 @@ const columns = [
     fixed: 'right',
     width: 100,
     render: () => (
-        <a href={`admin/${trunTo.href}`}>{trunTo.text}</a>
+        <Link to={`/${goToVote.href}`}>{goToVote.text}</Link>
     ),
   }
 ]

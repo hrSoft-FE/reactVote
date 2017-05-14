@@ -1,4 +1,5 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
+import { Link } from 'react-router'
 import { Form, Icon, Input, Button, Checkbox } from 'antd'
 import './index.less'
 const FormItem = Form.Item
@@ -38,11 +39,16 @@ class NormalLoginForm extends Component {
           })(
             <Checkbox>Remember me</Checkbox>
           )}
-          <a className="login-form-forgot" href="" >Forgot password</a>
-          <Button type="primary" htmlType="submit" className="login-form-button" >
-            Log in
+          <a className="login-form-forgot" href="">Forgot password</a>
+          <Button type="primary" htmlType="submit" className="login-form-button">
+            已有账号，立即登录
           </Button>
-          Or <a href="">register now!</a>
+          {/*Or <a href="">register now!</a>*/}
+          <Link to="register" className="login-form-register">
+            <Button type="primary" className="login-form-button">
+              还没账号，立即注册
+            </Button>
+          </Link>
         </FormItem>
       </Form>
     )

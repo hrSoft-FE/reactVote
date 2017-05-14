@@ -1,7 +1,3 @@
-/**
- * Created by Pororo on 17/5/14.
- */
-
 import React, { Component } from 'react'
 import { Tag, Col, Row, Radio, Checkbox, InputNumber } from 'antd'
 const RadioGroup = Radio.Group

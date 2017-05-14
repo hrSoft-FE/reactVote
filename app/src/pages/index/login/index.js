@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Col, Row} from 'antd'
 import './index.less'
 import Header from '../../../components/content/header/index'
 import Footer from '../../../components/content/footer/index'
@@ -10,13 +11,17 @@ class UserPages extends Component {
   render () {
     return (
       <div className="login-page-wrapper">
-        <Header />
+        {/*<Header />*/}
         {/*<Logo />*/}
-        {this.props.children}
+        {/*{this.props.children}*/}
         {/*<div className="login-wrapper">*/}
-        {/*<Login title={title} className="login" />*/}
+        <Row className="login-wrapper">
+          <Col span={22} offset={1}>
+            <Login title={title} className="login" />
+          </Col>
+        </Row>
         {/*</div>*/}
-        <Footer />
+        {/*<Footer />*/}
       </div>
     )
   }
